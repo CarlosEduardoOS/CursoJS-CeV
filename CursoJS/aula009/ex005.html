@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(54, 109, 192);
+            color: white;
+            font: normal 1.3em Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> no JavaScript</p>
+    <div id="msg">Clique em mim</div><br><br>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]/*O primeiro paragrafo é 0, o segundo é 1, o terceiro é 2 e por assim vai*/
+        window.document.write('Está escrito assim: ' + p1.innerHTML)/*Texto interno da variavel p1 que aqui no caso é o paragrafo 1 */
+        /*Como vc pode ver o innerText só puxa o texto e não a formatação, já o innerHTML puxa toda a formatação dentro da atg escolhida*/
+        
+        var d1 = document.getElementById('msg')
+        d1.style.background = 'green'
+        /*d1.innerHTML = 'Estou aguardando.....'*/
+        var d = document.querySelector('div#msg')
+        d.style.color = 'blue'
+
+        window.document.write('<br>')
+        window.document.write('<br>')
+        window.document.write('Olá, Mundo!' + '<br>')
+        window.document.write(window.document.charset + '<br>')
+        window.document.write(window.navigator.appName + '<br>')
+        window.document.write(window.document.URL)
+    </script>
+</body>
+</html>

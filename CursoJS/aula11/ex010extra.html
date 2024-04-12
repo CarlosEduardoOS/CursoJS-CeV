@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Nacionalidade</title>
+</head>
+<body>
+    <h1>Escolha a sua nacionalidade</h1>
+    <input type="text" id="txtpais" list="lp">
+    <datalist id="lp">
+        <option value="Estados Unidos">EUA</option>
+        <option value="Reino Unido">UK</option>
+        <option value="Brasil">BR</option>
+        <option value="Argentina">ARG</option>
+        <option value="Canada">CND</option>
+    </datalist>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var txtpais = document.getElementById('txtpais')
+            var res = document.getElementById('res')
+            var pais = txtpais.value //Não precisa fazer conversão para string
+            res.innerHTML = `<p>Seu país é ${pais}</p>`
+            if (pais == 'Brasil') {
+                res.innerHTML += '<p>Você é Brasileiro!!</p>'
+            } else {
+                if (pais == 'Argentina') {
+                    res.innerHTML += '<p>Morra boludo fudido</p>'
+                } else {
+                    res.innerHTML += '<p>Você é Gringo<p>'
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

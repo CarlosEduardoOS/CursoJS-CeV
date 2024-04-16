@@ -34,3 +34,4 @@ switch(diaSem) {
         console.log('Sábado')
         break
 }
+
